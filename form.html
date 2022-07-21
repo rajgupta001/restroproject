@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reservation-form</title>
+    <style>
+
+
+
+        body{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,50,0.5),rgba(0,0,50,0.5)),url(f17.jpg);
+            background-color: cover;
+            background-position: center;
+            font-family: sans-serif;
+        }
+     
+     .reservation-form{
+        margin-top: 100px;
+        color: #fff;
+        text-transform: uppercase;
+        transition: all 4s ease-in-out;
+     }
+
+     .reservation-form h1{
+        font-size: 286px;
+    line-height: 10px;
+     }
+     .reservation-form h2{
+        font-size :70px;
+     }
+     
+     form{
+        margin-top: 51px;
+        transition: all 4s ease-in-out;
+
+     }
+      .res{
+        font-size: 56px;
+      }
+     .form-control{
+        width: 645px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    color: #fff;
+    font-size: 31px;
+    margin-bottom: 100px;
+    margin-left: -383px;
+    margin-right: -264px
+     }
+      input{
+        height: 73px;
+      }
+
+      form.submit{
+        background: #ff5722;
+        border-color: transparent;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        height: 50px;
+        margin-top: 20px;
+      }
+     form .submit:hover{
+        background-color: #f44336;
+        cursor: pointer;
+     }
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="reservation-form">
+        <h1>RESERVATION</h1>
+        <h2>
+           We are truely grateful
+        </h2>
+    </div>
+    <div class="reserve">
+        <form action="contact.php" id="reserve" method="post">
+
+            <input type="text" name="name" class="form-control" placeholder="YOUR NAME" required>
+            <br>
+            <input type="email" name="email" class="form-control" placeholder="YOUR EMAIL"
+            required><br>
+
+
+
+        <textarea name="message" class="form-control" placeholder="MESSAGE" rows="4" required></textarea>
+        <input type="submit" class="form-control" value="SEND MESSAGE">
+        <br>
+
+
+    </form>
+    </div>
+</body>
+</html>

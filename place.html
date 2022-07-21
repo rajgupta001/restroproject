@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reservation-form</title>
+    <style>
+
+
+* {
+  box-sizing: border-box;
+  margin-left: 34px;
+}
+
+.background{
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(160, 119, 13, 0.865));
+    margin-left: -3%;
+  
+}
+body {
+  margin: 21px;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 30%;
+    padding: 50px;
+    font-size: 60px;
+    font-family:'Splash', cursive;
+    color: rgb(154, 151, 151);
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+.city{
+    text-align: center;
+    font-size: 150px;
+    font-family: 'Times New Roman', Times, serif;
+    color: antiquewhite;
+}
+</style>
+</head>
+<body>
+    <section class="background">
+    
+
+ <div class="city">
+        
+  We are currently in these cities
+ </div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+  
+    <img src="berlin.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+    <h2>Berlin</h2>
+  </div>
+  <div class="column">
+    
+    <img src="lisbon-3.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+    <h2>Lisbon</h2>
+  </div>
+
+  <div class="column">
+    <img src="london.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+    <h2>London</h2>
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+</section>
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- <section class="section-citis" id="cities">
+            
+    <div class="row" style="text-align: center;">
+        <h2>We're currently in these cities</h2>
+    </div>
+
+        <div class="row1">
+            <div class="col1">
+              <img src="resources/img/lisbon-3.jpg" alt="Lisbon">
+              
+              <div class="city-feature">
+                  <i class="ions"></i>
+               2000+ happy eaters
+              </div>
+               
+                <div class="city-feature">
+                  <i class="ions"></i>
+               50+ top chefs
+              </div>
+                <div class="city-feature">
+                  <i class="ions"></i>
+             <a href="#"></a>  
+              </div>
+                
+            </div>
+            
+            <div class="col1">
+              <img src="resources/img/san-francisco.jpg" alt="San Francisco">
+             
+              <div class="city-feature">
+                  <i class="ions"></i>
+               3000+ happy eaters
+              </div>
+               
+                <div class="city-feature">
+                  <i class="ions"></i>
+               150+ top chefs
+              </div>
+                <div class="city-feature">
+                  <i class="ions"></i>
+               <a href="#"></a>
+              </div>
+                
+            </div>
+            
+            <div class="col span-1-of-4 box">
+              <img src="resources/img/berlin.jpg" alt="Berlin">
+             
+              <div class="city-feature">
+                  <i class="ion-ns"></i>
+               2500+ happy eaters
+              </div>
+               
+                <div class="city-feature">
+                  <i class="ions"></i>
+               250+ top chefs
+              </div>
+                <div class="city-feature">
+                  <i class="ion-socins"></i>
+               <a href="#"></a> 
+              </div>
+                
+            </div>
+            <div class="col span-1-of-4 box">
+              <img src="resources/img/london.jpg" alt="London">
+              <h3>London</h3>
+              <div class="city-feature">
+                  <i class="ion-ns"></i>
+               2700+ happy eaters
+              </div>
+               
+                <div class="city-feature">
+                  <i class="ions"></i>
+               50+ top chefs
+              </div>
+                <div class="city-feature">
+                  <i class="ion-socins"></i>
+               <a href="#"></a> 
+              </div>
+                
+            </div>
+        </div>
+         
+     </section> -->
+</body>
+</html>
